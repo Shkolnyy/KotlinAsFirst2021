@@ -251,16 +251,3 @@ fun roman(n: Int): String = TODO()
  * 23964 = "двадцать три тысячи девятьсот шестьдесят четыре"
  */
 fun russian(n: Int): String = TODO()
-/**    var count = 0
- *   var n1 = n
-  *  while (n > 0){
-   *     count++
-    *    n1 = n1 / 10
-   * }
-*    val d = n1.toInt()
- *   for (i in 1..d){
-  *      if ()
-   * }
-*
-*}
-*/
