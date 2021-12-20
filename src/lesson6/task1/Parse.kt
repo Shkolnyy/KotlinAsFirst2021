@@ -3,6 +3,7 @@
 package lesson6.task1
 
 import java.lang.NumberFormatException
+import java.time.format.DateTimeFormatter
 
 // Урок 6: разбор строк, исключения
 // Максимальное количество баллов = 13
@@ -89,6 +90,14 @@ fun dateStrToDigit(str: String): String = TODO()
  * входными данными.
  */
 fun dateDigitToStr(digital: String): String = TODO()
+//    var a = digital.split(".")
+//    val c = digital
+//
+//    val b = DateTimeFormatter.ofPattern("dd.MM.yyyy")
+//    val dat = b.parse(c)
+//    val res = DateTimeFormatter.ofPattern("dd MMMM yyyy").format(dat)
+//    return res
+//}
 
 /**
  * Средняя (4 балла)
@@ -153,7 +162,25 @@ fun bestHighJump(jumps: String): Int {
  * Вернуть значение выражения (6 для примера).
  * Про нарушении формата входной строки бросить исключение IllegalArgumentException
  */
-fun plusMinus(expression: String): Int = TODO()
+
+fun plusMinus(expression: String): Int {
+    if (!Regex("""[0-9]+((\s[+-]\s[0-9]+)+)?""").matches(expression)) {
+        throw IllegalArgumentException()
+    }
+    var l = expression.split(" ")
+    var r = l[0].toInt()
+    val a = l.size - 3
+
+    for(i in 0..a) {
+        if (i % 2 == 0) {
+            when {
+                l[i+1] == "+" -> r += l[i+2].toInt()
+                l[i+1] == "-" -> r -= l[i+2].toInt()
+            }
+        }
+    }
+    return r
+}
 
 /**
  * Сложная (6 баллов)
@@ -164,7 +191,17 @@ fun plusMinus(expression: String): Int = TODO()
  * Вернуть индекс начала первого повторяющегося слова, или -1, если повторов нет.
  * Пример: "Он пошёл в в школу" => результат 9 (индекс первого 'в')
  */
-fun firstDuplicateIndex(str: String): Int = TODO()
+fun firstDuplicateIndex(str: String): Int {
+    var res = 0
+    var stroka = str.toLowerCase().split(" ")
+    val a = stroka.size
+    if (a == 1) return -1
+    for (i in 0..a) {
+        if (stroka[i] == stroka[i + 1]) return res
+        res = res + stroka[i].length + 1
+    }
+    return -1
+}
 
 /**
  * Сложная (6 баллов)
