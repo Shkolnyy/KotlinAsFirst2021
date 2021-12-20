@@ -90,14 +90,7 @@ fun dateStrToDigit(str: String): String = TODO()
  * входными данными.
  */
 fun dateDigitToStr(digital: String): String = TODO()
-//    var a = digital.split(".")
-//    val c = digital
-//
-//    val b = DateTimeFormatter.ofPattern("dd.MM.yyyy")
-//    val dat = b.parse(c)
-//    val res = DateTimeFormatter.ofPattern("dd MMMM yyyy").format(dat)
-//    return res
-//}
+
 
 /**
  * Средняя (4 балла)
