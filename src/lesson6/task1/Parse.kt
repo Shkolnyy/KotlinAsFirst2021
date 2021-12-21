@@ -189,7 +189,7 @@ fun firstDuplicateIndex(str: String): Int {
     var stroka = str.toLowerCase().split(" ")
     val a = stroka.size
     if (a == 1) return -1
-    for (i in 0..a) {
+    for (i in 0..a - 2) {
         if (stroka[i] == stroka[i + 1]) return res
         res += stroka[i].length + 1
     }
