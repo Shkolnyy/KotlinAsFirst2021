@@ -191,7 +191,7 @@ fun firstDuplicateIndex(str: String): Int {
     if (a == 1) return -1
     for (i in 0..a) {
         if (stroka[i] == stroka[i + 1]) return res
-        res = res + stroka[i].length + 1
+        res += stroka[i].length + 1
     }
     return -1
 }
