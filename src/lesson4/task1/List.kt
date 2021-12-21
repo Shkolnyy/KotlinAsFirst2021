@@ -190,10 +190,10 @@ fun factorizeToString(n: Int): String {
     var n1 = n
     var d = 2
     val result1 = mutableListOf<String>()
-    while (n1 > 1){
-        while(n1 % d == 0){
+    while (n1 > 1) {
+        while (n1 % d == 0) {
             val d1 = d.toString()
-            result1.add (d1)
+            result1.add(d1)
             n1 = n1 / d
         }
         d++
@@ -257,12 +257,11 @@ fun decimalFromString(str: String, base: Int): Int = TODO()
 fun roman(n: Int): String {
     var n1 = n
     val result = mutableListOf<String>()
-
-    val romanss = listOf("M" , "CM" , "D" , "CD" , "C" , "XC" , "L" , "XL" , "X" , "IX" , "V" , "IV" , "I" )
-    val decimal = listOf(1000 , 900 , 500 , 400 , 100 , 90 , 50 , 40 ,10 , 9 , 5 , 4 , 1)
-    for (i in 0..12){
-        while (n1 >= decimal[i]){
-            result.add  (romanss[i].repeat(n1 / decimal[i]))
+    val romanss = listOf("M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I")
+    val decimal = listOf(1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1)
+    for (i in 0..12) {
+        while (n1 >= decimal[i]) {
+            result.add(romanss[i].repeat(n1 / decimal[i]))
             n1 %= decimal[i]
         }
     }

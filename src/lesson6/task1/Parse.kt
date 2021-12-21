@@ -118,16 +118,16 @@ fun flattenPhoneNumber(phone: String): String = TODO()
  * Прочитать строку и вернуть максимальное присутствующее в ней число (717 в примере).
  * При нарушении формата входной строки или при отсутствии в ней чисел, вернуть -1.
  */
-fun bestLongJump(jumps: String): Int {
-    val resultat = mutableListOf<Int>()
-    for (i in jumps.split(' '))
-        if (i !in listOf("-", "%"))
-            try {
-                val result = i.toInt()
-                resultat.add(result)
-            } catch (e: NumberFormatException) {return -1}
-    return resultat.maxOrNull() ?: -1
-}
+fun bestLongJump(jumps: String): Int = TODO()
+//    val resultat = mutableListOf<Int>()
+//    for (i in jumps.split(' '))
+//        if (i !in listOf("-", "%"))
+//            try {
+//                val result = i.toInt()
+//                resultat.add(result)
+//            } catch (e: NumberFormatException) {return -1}
+//    return resultat.maxOrNull() ?: -1
+//}
 
 /**
  * Сложная (6 баллов)
@@ -140,11 +140,11 @@ fun bestLongJump(jumps: String): Int {
  * При нарушении формата входной строки, а также в случае отсутствия удачных попыток,
  * вернуть -1.
  */
-fun bestHighJump(jumps: String): Int {
-    val resultat = mutableListOf<Int>()
-    val s = jumps.split(' ').toMutableList()
-    for ( i in 0..s.size - 2) if (s[i+1] == "+") resultat.add(s[i].toInt()); return resultat.maxOrNull() ?: -1
-}
+fun bestHighJump(jumps: String): Int = TODO()
+//    val resultat = mutableListOf<Int>()
+//    val s = jumps.split(' ').toMutableList()
+//    for ( i in 0..s.size - 2) if (s[i+1] == "+") resultat.add(s[i].toInt()); return resultat.maxOrNull() ?: -1
+//}
 
 /**
  * Сложная (6 баллов)

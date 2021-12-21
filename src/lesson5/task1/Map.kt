@@ -210,9 +210,9 @@ fun canBuildFrom(chars: List<Char>, word: String): Boolean = TODO()
  */
 fun extractRepeats(list: List<String>): Map<String, Int> {
     val b = mutableMapOf<String, Int>()
-    for (i in list )
-        if (i in b) b[i] = b[i]!! + 1 else b[i] = 1
-    val otv = b.filter { (key, value) -> value!! >= 2 }
+    for (i in list)
+        if (i in b ) b[i] = b[i]!! + 1 else b[i] = 1
+    val otv = b.filter { (key, value) -> value >= 2 }
     return otv
 }
 
