@@ -259,7 +259,7 @@ fun roman(n: Int): String {
     val result = mutableListOf<String>()
     val romanss = listOf("M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I")
     val decimal = listOf(1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1)
-    for (i in 0..12) {
+    for (i in 0..romanss.size - 1) {
         while (n1 >= decimal[i]) {
             result.add(romanss[i].repeat(n1 / decimal[i]))
             n1 %= decimal[i]

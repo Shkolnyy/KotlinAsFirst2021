@@ -164,11 +164,11 @@ fun plusMinus(expression: String): Int {
     var r = l[0].toInt()
     val a = l.size - 3
 
-    for(i in 0..a) {
+    for (i in 0..a) {
         if (i % 2 == 0) {
             when {
-                l[i+1] == "+" -> r += l[i+2].toInt()
-                l[i+1] == "-" -> r -= l[i+2].toInt()
+                l[i + 1] == "+" -> r += l[i + 2].toInt()
+                l[i + 1] == "-" -> r -= l[i + 2].toInt()
             }
         }
     }
@@ -207,7 +207,7 @@ fun firstDuplicateIndex(str: String): Int {
  * или пустую строку при нарушении формата строки.
  * Все цены должны быть больше нуля либо равны нулю.
  */
-fun mostExpensive(description: String): String =TODO()
+fun mostExpensive(description: String): String = TODO()
 
 /**
  * Сложная (6 баллов)
