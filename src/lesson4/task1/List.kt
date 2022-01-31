@@ -255,10 +255,10 @@ fun decimalFromString(str: String, base: Int): Int = TODO()
  * Например: 23 = XXIII, 44 = XLIV, 100 = C
  */
 fun roman(n: Int): String {
-    var n1 = n
     val result = mutableListOf<String>()
     val romanss = listOf("M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I")
     val decimal = listOf(1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1)
+    var n1 = n
     for (i in 0..romanss.size - 1) {
         while (n1 >= decimal[i]) {
             result.add(romanss[i].repeat(n1 / decimal[i]))
