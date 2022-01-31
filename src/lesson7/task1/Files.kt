@@ -115,7 +115,7 @@ fun countSubstrings(inputName: String, substrings: List<String>): Map<String, In
  *
  */
 fun sibilants(inputName: String, outputName: String) {
-    TODO()
+
 }
 
 /**
@@ -136,7 +136,19 @@ fun sibilants(inputName: String, outputName: String) {
  *
  */
 fun centerFile(inputName: String, outputName: String) {
-    TODO()
+    var max = 0
+    val x = File(outputName).bufferedWriter()
+    for (i in File(inputName).readLines()) {
+        if (i.trim().length > max) max = i.trim().length
+    }
+    for (i in File(inputName).readLines()) {
+        for (a in 1..(max - i.trim().length)/2) {
+            x.write(" ")
+        }
+        x.write(i.trim())
+        x.newLine()
+    }
+    x.close()
 }
 
 /**
